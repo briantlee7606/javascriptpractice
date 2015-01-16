@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<body>
+<h1>Phone Number Evaluator</h1>
+<br /><br />
+<p id "testnumber"></p>
+
+<script>
+//document.getElementById("testnumber").innerHTML = result;
+
+var userInput;
+
+function evaluateNumber(number) {
+document.write("The answer is " + number.match(/^\d{3}-?\d{4}$/));
+if (number.length!=8 && number.length!=7) {
+return false;
+}
+
+if (number.length == 8) {
+if (number.charAt(3)!="-") {
+return false;
+}
+
+for (var i=0; i<3; i++) {
+if (isNaN(number.substring(i,i+1))) {
+return false;
+}
+}
+
+for (var j=4; j<number.length; j++) {
+if (isNaN(number.substring(j,j+1))) {
+return false;
+}
+}
+}
+
+if (number.length==7) {
+if (isNaN(number)) {
+return false;
+}
+}
+return true;
+}
+//document.write(isNaN(0));
+
+userInput=prompt("Input a number, and I'll see if it's in a valid phone number format: ");
+var result = evaluateNumber(userInput);
+document.write(result);
+</script>
+</body>
+</html>

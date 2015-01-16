@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang = "en">
+  <head>
+    <meta charset = "utf-8">
+	<title>Dr. Evel's secret code page</title>
+  </head>
+  <body>
+    <p id = "code1">The eagle is in the </p>
+	<p id = "code2">The fox is in the</p>
+	<p id = "code3">snuck into the garden last night</p>
+	<p id = "code4">They said it would rain</p>
+	<p id = "code5">Does the red robin crow at</p>
+    <p id = "code6">The eagle is in the </p>
+	<p id = "code7">The fox is in the</p>
+	<p id = "code8">snuck into the garden last night</p>
+	<p id = "code9">My watch stopped at</p>
+	<p id = "code10">Does the red robin crow at</p>
+	<p id = "code11">The eagle is in the</p>
+	<p id = "code12">The fox is in the</p>
+	<script>
+	var access = document.getElementById("code9");
+	
+//	document.write("access: " + access + "\n");
+	var code = access.innerHTML;
+	var outercode = access.outerHTML;
+	alert(outercode);
+	code = code + " midnight";
+		alert(code);
+access.outerHTML = "<h1 id = \"code9\"> It happened at</h>";
+	access.innerHTML = "It happened at";
+	code = access.innerHTML;
+//	document.write("code: " + code);
+	code = code + " midnight";
+	alert(code);
+	</script>
+  </body>
+ </html>
+	

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang = "en">
+  <head>
+    <link rel = "stylesheet" type="text/css" href="briansstyle.css"/>
+	
+    <meta charset = "utf-8">
+	<title>Planets</title>
+		<script>
+		function init() {
+		var planet = document.getElementById("greenplanet");
+		planet.innerHTML = "Red Alert: hit by phaser fire!";
+		planet.setAttribute("class", "redtext");
+		var test1;
+		var test2 = {"abcdef": 123};
+		var test3 = ["abcdef", 123];
+		function test4() {return "abcdef"};
+		  document.write(typeof test1);
+		  document.write("\n"+typeof test2);
+		  document.write(typeof test3);
+		  document.write(typeof test4);
+
+		}
+		window.onload = init;
+	</script>
+
+  </head>
+  <body>
+  <h1 id = "greenplanetheader">Green Planet</h1>
+  <p id = "greenplanet">All is well</p>
+  <h1 id = "redplanetheader">Red Planet</h1>
+  <p id = "redplanet">Nothing to report</p>
+  <h1 id = "blueplanetheader">Blue Planet</h1>
+  <p id = "blueplanet">All systems A-OK</p>
+  
+  </body>
+ </html>
+	
